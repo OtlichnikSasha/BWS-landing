@@ -43,22 +43,33 @@
     border: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     overflow-x: hidden;
     font-family: "SF Pro Display", sans-serif;
     width: 100%;
     height: 100%;
     margin-top: 75px;
 }
-.container{
+
+.container {
     display: block;
     margin: 0 auto;
     max-width: 1200px;
     height: 100%;
+    width: 100%;
 }
+
+@media screen and (max-width: 1250px) {
+    .container {
+        padding: 0 5%;
+    }
+}
+
 a {
     text-decoration: none;
 }
+
 .heading {
     font-weight: 600;
     font-size: 36px;
@@ -84,15 +95,19 @@ a {
     color: #F54343;
     display: block;
 }
-section{
+
+section {
     border-bottom: 2px solid #42424c33;
 }
-section.delivery_network_section{
+
+section.delivery_network_section {
     border-bottom: 0;
 }
-section:last-child{
+
+section:last-child {
     border-bottom: 0;
 }
+
 /* Скролл страницы справа */
 ::-webkit-scrollbar {
     width: 8px;
@@ -114,7 +129,7 @@ section:last-child{
     left: 0;
 }
 
-.header .container{
+.header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -158,6 +173,13 @@ section:last-child{
     cursor: pointer;
 }
 
+@media screen and (min-width: 200px) and (max-width: 650px) {
+    .go_to_site_btn {
+        width: auto;
+        padding: 0 15px;
+    }
+}
+
 /* Первый блок о нас */
 .about_section {
     width: 100%;
@@ -175,30 +197,36 @@ section:last-child{
     top: 20%;
     opacity: 0.15;
 }
-.about_section_heading_img.second{
+
+.about_section_heading_img.second {
     opacity: 0.1;
     top: 40%;
 }
-.about_section_phones_img{
+
+.about_section_phones_img {
     position: absolute;
-    z-index:100;
-    right:4%;
-    max-width:800px;
-    bottom:0;
+    z-index: 100;
+    right: 4%;
+    max-width: 800px;
+    bottom: 0;
 }
-.about_section_cloud_img{
+
+.about_section_cloud_img {
     position: absolute;
-    z-index:101;
-    bottom:0;
+    z-index: 101;
+    bottom: 0;
     width: 100%;
 }
+
 .about_section_data {
     max-width: 350px;
 }
-.about_section_data .heading{
-    color:#FFFFFF;
-    line-height:120%;
+
+.about_section_data .heading {
+    color: #FFFFFF;
+    line-height: 120%;
 }
+
 .about_section_data p {
     font-size: 20px;
     color: #FFFFFF;
@@ -206,43 +234,180 @@ section:last-child{
     line-height: 110%;
     letter-spacing: -0.01em;
 }
+
+@media screen and (max-width: 1250px) {
+    .about_section {
+        height: 650px;
+        padding-top: 20px;
+    }
+
+    .about_section_data .heading {
+        text-align: center;
+    }
+
+    .about_section_data p {
+        text-align: center;
+    }
+
+    .about_section_data {
+        max-width: 100%;
+    }
+
+    .about_section_heading_img {
+        top: 10%;
+        left: 10%;
+    }
+
+    .about_section_heading_img.second {
+        top: 30%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .about_section_heading_img {
+        top: 20%;
+        width: 80%;
+    }
+
+    .about_section_heading_img.second {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 850px) {
+    .about_section_phones_img {
+        max-width: 700px;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 750px) {
+    .about_section_phones_img {
+        max-width: 100%;
+        right: auto;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 650px) {
+    .about_section {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    .about_section {
+        height: 520px;
+    }
+
+    .about_section_heading_img {
+        opacity: 0.35;
+    }
+
+    .about_section_heading_img.second {
+        opacity: 0.2;
+    }
+}
+
+
 /* More about us */
 .more_about_us_section {
     width: 100%;
     background: #fff;
     padding: 75px 0;
 }
+
 .more_about_us_item {
     width: 33%;
     margin-bottom: 15px;
+    padding-right: 15px;
 }
+
+.more_about_us_item .heading {
+    line-height: 125%;
+}
+
 .more_about_us_data {
     font-size: 18px;
     line-height: 150%;
     letter-spacing: -0.03em;
-    padding-right: 15px;
 }
+
+@media screen and (max-width: 950px) {
+    .more_about_us_section .flex_content:first-child {
+        display: block;
+        text-align: center;
+    }
+
+    .more_about_us_section .flex_content:first-child .more_about_us_item {
+        width: 100%;
+    }
+
+    .more_about_us_section .flex_content:first-child .more_about_us_item:last-child {
+        display: none;
+    }
+
+    .more_about_us_section .flex_content:first-child .more_about_us_item .subheading {
+        font-size: 24px;
+    }
+
+    .more_about_us_section .flex_content:last-child {
+        margin-top: 40px;
+    }
+
+    .more_about_us_section .flex_content:last-child .more_about_us_item:first-child {
+        display: none;
+    }
+
+    .more_about_us_section .flex_content:last-child .more_about_us_item {
+        width: 50%;
+    }
+
+    .more_about_us_section .flex_content:last-child .more_about_us_item:last-child {
+        padding-left: 15px;
+    }
+}
+
 
 /* Benefits section */
 .benefits_section {
     width: 100%;
     height: 550px;
-    background: url('../../static/images/background_l_user_polza.png') no-repeat center center;;
+    position: relative;
+    background: #0c1011;
 }
-.benefits_section .heading{
-    color:#FFFFFF;
+
+.benefits_background_place {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.benefits_background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.benefits_section .heading {
+    color: #FFFFFF;
     padding-bottom: 3%
 }
-.benefits_section__data{
-    padding-top:7%
+
+.benefits_section__data {
+    padding-top: 7%;
+    position: absolute;
 }
+
 .benefits_data {
     width: 100%;
     display: flex;
     max-width: 80%;
     padding-top: 30px;
 }
-.benefits_data:last-child{
+
+.benefits_data:last-child {
     padding-top: 20px;
 }
 
@@ -261,20 +426,59 @@ section:last-child{
     letter-spacing: -0.01em;
     padding-bottom: 15px;
 }
-.benefits_data__item_text{
+
+.benefits_data__item_text {
     font-size: 18px;
     padding-right: 15px;
     line-height: 110%;
     color: #e0e0e0;
 }
 
+@media screen and (max-width: 1100px) {
+    .benefits_data__item {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .benefits_background {
+        object-fit: contain;
+    }
+
+    .benefits_section {
+        height: 800px;
+    }
+
+    .benefits_background_place {
+        height: 60%;
+        top: auto;
+        bottom: 0;
+    }
+
+    .benefits_data {
+        max-width: 100%;
+    }
+
+    .benefits_data__item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 550px)  and (min-width: 100px) {
+    .benefits_section {
+        height: 900px;
+    }
+}
+
 /* Order information section */
 .order_information_section {
     padding: 75px 0;
 }
-.order_information_section .heading{
+
+.order_information_section .heading {
     text-align: center;
 }
+
 .order_way {
     width: 100%;
     display: flex;
@@ -301,9 +505,42 @@ section:last-child{
     justify-content: center;
     color: #FFFFFF;
 }
-.order_way__item_text{
+
+.order_way__item_text {
     text-align: center;
     margin-top: 15px;
+}
+
+@media screen and (max-width: 950px) {
+    .order_way {
+        padding: 40px 0 0 0;
+        flex-wrap: wrap;
+    }
+
+    .order_way__item:nth-child(2n) {
+        display: none;
+    }
+
+    .order_way__item {
+        width: 49%;
+        margin-bottom: 40px;
+        justify-content: initial;
+        height: 120px;
+    }
+
+    .order_way__item:last-child {
+        width: 100%;
+    }
+
+    .order_way__item_circle {
+        width: 45px;
+        height: 45px;
+        margin: 0 auto;
+    }
+
+    .order_way__item_text {
+        font-size: 24px;
+    }
 }
 
 /* Delivery network section */
@@ -313,9 +550,11 @@ section:last-child{
     background: #F1F2F5;
     position: relative;
 }
-.delivery_network_section .container{
+
+.delivery_network_section .container {
     padding-top: 5%;
 }
+
 .delivery_network__container {
     width: 100%;
     height: 100%;
@@ -327,33 +566,75 @@ section:last-child{
 
 .delivery_network__truck_img {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     height: 100%;
     max-height: 500px;
-    padding: 5% 0 0 30%;
+    padding-left: 30%;
     z-index: 2;
     position: absolute;
 }
+
 .delivery_network__cloud_img {
     width: 40%;
     z-index: 1;
     position: absolute;
     top: 4%;
 }
-.delivery_network__subheading{
-    color:#F54343;
-    margin:40px 0 20px 0;
+
+.delivery_network__subheading {
+    color: #F54343;
+    margin: 40px 0 20px 0;
     z-index: 25;
 }
-.delivery_network__subheading__text{
+
+.delivery_network__subheading__text {
     font-size: 18px;
     padding-right: 15px;
     line-height: 102%;
     color: #42424C;
-    max-width:350px;
+    max-width: 350px;
     z-index: 25;
 }
 
+@media screen and (max-width: 1100px) and (min-width: 200px) {
+    .delivery_network_section {
+        height: 700px;
+    }
+
+    .delivery_network__container {
+        display: block;
+        position: initial;
+    }
+
+    .delivery_network__truck_img {
+        padding-left: 0;
+        bottom: 0;
+        object-fit: contain;
+    }
+
+    .delivery_network__cloud_img {
+        bottom: 45%;
+        top: auto;
+    }
+
+    .delivery_network_section .container {
+        text-align: center;
+    }
+
+    .delivery_network__subheading {
+        font-size: 24px;
+    }
+
+    .delivery_network__subheading__text {
+        max-width: 100%;
+    }
+
+}
+@media screen and (max-width: 600px) and (min-width: 200px) {
+    .delivery_network_section {
+        height: 600px;
+    }
+}
 /* Offer to register section */
 .offer_registration_section {
     background: #F1F2F5;
@@ -381,13 +662,15 @@ section:last-child{
     top: 10%;
     left: 40%;
 }
-.offer_registration__data{
-    padding-top:10%;
-    max-width:400px;
+
+.offer_registration__data {
+    padding-top: 10%;
+    max-width: 400px;
 }
-.offer_registration_text{
-    margin:40px 0 15px 0;
-    line-height:125%;
+
+.offer_registration_text {
+    margin: 40px 0 15px 0;
+    line-height: 125%;
     font-size: 18px;
     padding-right: 15px;
     color: #42424C;
@@ -410,4 +693,48 @@ section:last-child{
     cursor: pointer;
     opacity: 1;
     transition: all .5s;
+}
+
+@media screen and (max-width: 950px) and (min-width: 200px) {
+    .offer_registration_section {
+        height: 800px;
+    }
+
+    .offer_registration__data {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .registration_btn {
+        margin: 0 auto;
+    }
+
+    .offer_registration__phone_img {
+        max-width: 60%;
+        position: absolute;
+        z-index: 2;
+        max-height: 100%;
+        top: auto;
+        left: 25%;
+        bottom: 0;
+    }
+
+    .offer_registration__cloud_img {
+        bottom: 20%;
+        top: auto;
+    }
+
+}
+
+@media screen and (max-width: 750px) and (min-width: 200px) {
+    .offer_registration__phone_img{
+        max-width: 100%;
+        max-height: 60%;
+        left: 15%;
+    }
+}
+@media screen and (max-width: 600px) and (min-width: 200px) {
+    .offer_registration__phone_img{
+        left: auto;
+    }
 }
