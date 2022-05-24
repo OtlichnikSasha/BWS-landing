@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>BWS</title>
@@ -9,8 +9,29 @@
     <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
     <meta name="application-TileColor" content="#da532c">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="BWS, купить лакокрасочные изделия, купить краску, купить лак" />
+    <meta name="author" content="Варламов Александр">
+    <meta name="description" content='Landing page для сайта по продаже товаров для кузовного ремонта: BWS' />
+    <meta property="og:title" content="BWS Landing"/>
+    <meta property="og:description" content="Landing page для сайта по продаже товаров для кузовного ремонта: BWS"/>
+    <meta property="og:image" content="static/images/bws_landing.jpg" />
+    <meta property="og:type" content="landing"/>
 </head>
-<body>
+<body class="hidden">
+
+<!-- Preloader -->
+<div id="preloader" class="preloader visible">
+    <div class="logo">
+        <span>BWS</span>
+    </div>
+    <div class="loading">
+        <span class="loading_bullet"></span>
+        <span class="loading_bullet"></span>
+        <span class="loading_bullet"></span>
+        <span class="loading_bullet"></span>
+    </div>
+</div>
+
 <!-- Header -->
 <header class="header">
     <div class="container">
@@ -198,5 +219,7 @@
         </div>
     </div>
 </section>
+
+<script src="static/js/main.js"></script>
 </body>
 </html>
